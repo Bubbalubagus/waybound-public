@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.is-offscreen--r {
+    /* // Set the translate-x value to a sufficiently lare offset */
+    /* // so the card appears from off-screen. */
+    transform: translate(1000px, 0px) rotateZ(30deg) !important;
+    z-index: 10000;
+    transition: all 0.5s ease-in-out;
+}
+
+.is-offscreen--l {
+    /* // Set the translate-x value to a sufficiently lare offset */
+    /* // so the card appears from off-screen. */
+    transform: translate(-1000px, 0px) rotateZ(-20deg) !important;
+    z-index: 10000;
+    transition: all 0.5s ease-in-out;
+}
+
+.editor-content {
+    line-height: 1.5;
+}
+
+.editor-content h1,
+.editor-content h2,
+.editor-content h3,
+.editor-content h4,
+.editor-content h5,
+.editor-content h6 {
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-top: 1rem;
+}
+
+.editor-content h1 {
+    font-size: 1.5rem;
+}
+
+.editor-content h2 {
+    font-size: 1.4rem;
+}
+
+.editor-content h3 {
+    font-size: 1.3rem;
+}
+
+.editor-content h4 {
+    font-size: 1.2rem;
+}
+
+.editor-content h5 {
+    font-size: 1.1rem;
+}
+
+.editor-content h6 {
+    font-size: 1rem;
+}
+
+/* .editor-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    margin-top: 1rem;
+} */
+
+.editor-content {
+    min-height: 700px;
+}
+
+.editor-content a{
+    color: blue;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+
+@keyframes pulseAnimation {
+    0% {
+        background-color: #409edd; 
+      }
+    50% {
+        background-color: #9d5ab8; 
+      }
+    100% {
+        background-color: #3498db;
+      }
+  }
+  
+  .pulse-button {
+    animation: pulseAnimation 4s ease-in-out infinite;
+    /* Add other styling here for button size or additional properties */
+  }
+
+
+  @keyframes textPulse {
+    0%, 100% {
+        color: #fff;  /* Blue shade */
+    }
+    50% {
+        color: #969696;  /* Red shade */
+    }
+}
+
+.money-highlight {
+    animation: textPulse 10s linear infinite;
+    font-weight: bold; /* Make text bold to highlight further */
+}
